@@ -1,0 +1,290 @@
+/* assets/css/partner-with-us.css */
+
+/* ==============================================
+   PARTNER WITH US PAGE STYLES
+   ============================================== */
+
+/* --- Breadcrumb --- */
+.breadcrumb-section {
+    background-color: #f8fbf9;
+    padding: 15px 0;
+    border-bottom: 1px solid #e8f0eb;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    color: #1a3a5c;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.breadcrumb a {
+    color: #2e8b57;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: #1a3a5c;
+}
+
+.breadcrumb i {
+    font-size: 0.6rem;
+    color: #999;
+}
+
+.breadcrumb li:last-child {
+    color: #666;
+}
+
+/* --- Partner Hero (UPDATED for no side-cropping) --- */
+.partner-hero {
+    width: 100%;
+    background-color: #e8f5e9; /* Fallback color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.partner-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* Ensures the full image is visible without cropping */
+    object-position: center;
+}
+
+/* --- Partnership Types Section --- */
+.partnership-types-section {
+    padding: 60px 0 70px 0;
+    background-color: #ffffff;
+}
+
+.partnership-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* --- Partnership Card --- */
+.partnership-card {
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 16px;
+    padding: 35px 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.partnership-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    border-color: #d4e8d9;
+}
+
+.partnership-icon {
+    width: 70px;
+    height: 70px;
+    background-color: #e8f5e9;
+    color: #2e8b57;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    margin: 0 auto 20px;
+    border: 2px solid #2e8b57;
+}
+
+.partnership-card h3 {
+    font-size: 1.2rem;
+    color: #1a3a5c;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.partnership-card p {
+    font-size: 0.9rem;
+    color: #555555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- Partner CTA Section --- */
+.partner-cta-section {
+    background: linear-gradient(135deg, #e8f5e9 0%, #d4e8d9 100%);
+    padding: 70px 0;
+    text-align: center;
+}
+
+.partner-cta-section h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1a3a5c;
+    margin-bottom: 35px;
+}
+
+.partner-cta-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Primary Button */
+.partner-cta-buttons .btn-primary {
+    display: inline-block;
+    padding: 14px 40px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    background-color: #2e8b57;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid #2e8b57;
+}
+
+.partner-cta-buttons .btn-primary:hover {
+    background-color: #236b43;
+    border-color: #236b43;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(46, 139, 87, 0.4);
+}
+
+/* Outline Button */
+.partner-cta-buttons .btn-outline {
+    display: inline-block;
+    padding: 14px 40px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    background-color: transparent;
+    color: #2e8b57;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid #2e8b57;
+}
+
+.partner-cta-buttons .btn-outline:hover {
+    background-color: #2e8b57;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(46, 139, 87, 0.4);
+}
+
+.partner-cta-buttons .btn-primary i,
+.partner-cta-buttons .btn-outline i {
+    margin-left: 8px;
+    font-size: 0.9rem;
+}
+
+/* ==============================================
+   RESPONSIVE DESIGN
+   ============================================== */
+
+/* --- Tablet (768px to 991px) --- */
+@media (max-width: 991px) {
+    .partnership-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .partner-cta-section h2 {
+        font-size: 1.6rem;
+    }
+    .partner-cta-buttons .btn-primary,
+    .partner-cta-buttons .btn-outline {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+}
+
+/* --- Mobile (up to 767px) --- */
+@media (max-width: 767px) {
+    .breadcrumb-section {
+        padding: 12px 0;
+    }
+    .breadcrumb {
+        font-size: 0.8rem;
+    }
+    .partnership-types-section {
+        padding: 40px 0 50px 0;
+    }
+    .partnership-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .partnership-card {
+        padding: 25px 20px;
+    }
+    .partnership-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    .partnership-card h3 {
+        font-size: 1.1rem;
+    }
+    .partnership-card p {
+        font-size: 0.85rem;
+    }
+    .partner-cta-section {
+        padding: 50px 0;
+    }
+    .partner-cta-section h2 {
+        font-size: 1.4rem;
+        margin-bottom: 25px;
+    }
+    .partner-cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .partner-cta-buttons .btn-primary,
+    .partner-cta-buttons .btn-outline {
+        width: 100%;
+        text-align: center;
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+}
+
+/* --- Small Mobile (up to 480px) --- */
+@media (max-width: 480px) {
+    .partnership-card {
+        padding: 20px 15px;
+    }
+    .partnership-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 1.2rem;
+    }
+    .partnership-card h3 {
+        font-size: 1rem;
+    }
+    .partnership-card p {
+        font-size: 0.8rem;
+    }
+    .partner-cta-section h2 {
+        font-size: 1.2rem;
+    }
+    .partner-cta-buttons .btn-primary,
+    .partner-cta-buttons .btn-outline {
+        padding: 10px 25px;
+        font-size: 0.85rem;
+    }
+}

@@ -1,0 +1,316 @@
+/* assets/css/contact.css */
+
+/* --- Contact Hero Section --- */
+.contact-hero-section {
+    background: linear-gradient(135deg, #1a3a5c 0%, #2a5a7c 100%);
+    padding: 50px 0;
+}
+
+.contact-hero-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.contact-hero-image {
+    flex: 1;
+}
+
+.contact-hero-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.contact-hero-content {
+    flex: 1;
+}
+
+.contact-hero-content h1 {
+    font-size: 3rem;
+    color: var(--white);
+    font-weight: 700;
+}
+
+/* --- Contact Main Section --- */
+.contact-main-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+/* Form Wrapper */
+.contact-form-wrapper h2 {
+    font-size: 1.8rem;
+    color: var(--primary-navy);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-subtitle {
+    color: var(--text-light);
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+/* Form Styling */
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--primary-navy);
+    margin-bottom: 8px;
+}
+
+.required {
+    color: #e74c3c;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #dce5e0;
+    border-radius: 8px;
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    background-color: #fcfdfd;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 4px rgba(46, 139, 87, 0.1);
+    background-color: var(--white);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.btn-submit {
+    padding: 14px 40px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+}
+
+/* Map Wrapper */
+.contact-map-wrapper iframe {
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* --- Contact Info Cards Section --- */
+.contact-info-section {
+    padding: 60px 0 80px;
+    background-color: #f8fbf9;
+}
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.info-card {
+    background: var(--white);
+    border: 1px solid #eef2f0;
+    border-radius: 15px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.info-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--light-green);
+    color: var(--primary-green);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    margin: 0 auto 20px;
+}
+
+.info-card h4 {
+    font-size: 1.1rem;
+    color: var(--primary-navy);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.info-card p {
+    color: var(--text-light);
+    font-size: 0.83rem;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+.info-card a {
+    color: var(--primary-green);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.info-card a:hover {
+    color: var(--primary-navy);
+    text-decoration: underline;
+}
+
+/* --- Alerts --- */
+.alert {
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.alert-success {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+    border: 1px solid #c8e6c9;
+}
+
+.alert-error {
+    background-color: #fdecea;
+    color: #b71c1c;
+    border: 1px solid #f5c6cb;
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-map-wrapper iframe {
+        height: 400px;
+    }
+    .contact-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contact-hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-form-wrapper h2 {
+        font-size: 1.4rem;
+    }
+    .contact-map-wrapper iframe {
+        height: 300px;
+    }
+}
+
+/* --- Form Rows (for DOB/Gender, Mobile/WhatsApp, City/State) --- */
+.contact-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.contact-form .form-row .form-group {
+    margin-bottom: 0;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+    .contact-form .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .contact-form .form-row .form-group {
+        margin-bottom: 20px;
+    }
+}
+.contact-form select {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #dce5e0;
+    border-radius: 8px;
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    background-color: #fcfdfd;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231a3a5c' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+    padding-right: 40px;
+    cursor: pointer;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form select:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 4px rgba(46, 139, 87, 0.1);
+    background-color: var(--white);
+}
+
+/* WhatsApp Link Styling */
+.whatsapp-link {
+    color: #25d366 !important;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.whatsapp-link:hover {
+    color: #128c7e !important;
+}
+
+.whatsapp-link i {
+    color: #25d366;
+}
+
+.whatsapp-link:hover i {
+    color: #128c7e;
+}

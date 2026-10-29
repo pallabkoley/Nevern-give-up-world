@@ -1,0 +1,398 @@
+/* assets/css/child-education.css */
+
+/* ==============================================
+   CHILD EDUCATION PAGE STYLES
+   ============================================== */
+
+/* --- Breadcrumb --- */
+.breadcrumb-section {
+    background-color: #f8fbf9;
+    padding: 15px 0;
+    border-bottom: 1px solid #e8f0eb;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    color: #1a3a5c;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.breadcrumb a {
+    color: #2e8b57;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: #1a3a5c;
+}
+
+.breadcrumb i {
+    font-size: 0.6rem;
+    color: #999;
+}
+
+.breadcrumb li:last-child {
+    color: #666;
+}
+
+/* --- Program Detail Hero (UPDATED for no side-cropping) --- */
+.child-hero {
+    width: 100%;
+    background-color: #e8f5e9; /* Fallback color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.child-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* Ensures the full image is visible without cropping */
+    object-position: center;
+}
+
+/* --- Focus & Approach Section --- */
+.focus-approach-section {
+    padding: 50px 0 60px 0;
+    background-color: #ffffff;
+}
+
+.focus-approach-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* --- Left: Our Focus Box --- */
+.focus-box {
+    background-color: #f8fbf9;
+    border: 1px solid #e0ece6;
+    border-radius: 16px;
+    padding: 35px 30px;
+}
+
+.focus-box h3 {
+    font-size: 1.4rem;
+    color: #1a3a5c;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.focus-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.focus-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #e8f0eb;
+}
+
+.focus-list li:last-child {
+    border-bottom: none;
+}
+
+.focus-list-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.green-icon {
+    background-color: #2e8b57;
+}
+
+.blue-icon {
+    background-color: #1a3a5c;
+}
+
+.focus-list-text strong {
+    display: block;
+    font-size: 1.05rem;
+    color: #1a3a5c;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.focus-list-text span {
+    font-size: 0.9rem;
+    color: #666666;
+    line-height: 1.5;
+}
+
+/* --- Right: Our Approach Box --- */
+.approach-box {
+    background-color: #f0f7f4;
+    border-radius: 16px;
+    padding: 35px 30px;
+}
+
+.approach-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.approach-icon {
+    width: 55px;
+    height: 55px;
+    background-color: #2e8b57;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+.approach-header h3 {
+    font-size: 1.4rem;
+    color: #1a3a5c;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Approach Steps */
+.approach-steps {
+    margin-bottom: 25px;
+}
+
+.approach-step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    font-size: 1rem;
+    color: #1a3a5c;
+    font-weight: 500;
+    flex-wrap: wrap;
+}
+
+.step-icon {
+    width: 36px;
+    height: 36px;
+    background-color: #ffffff;
+    color: #2e8b57;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.step-arrow {
+    color: #2e8b57;
+    font-size: 0.8rem;
+    margin: 0 5px;
+}
+
+/* Quote Box */
+.approach-quote {
+    background-color: #e8f5e9;
+    border-left: 5px solid #2e8b57;
+    border-radius: 0 12px 12px 0;
+    padding: 20px 25px;
+    margin-bottom: 25px;
+}
+
+.approach-quote p {
+    font-size: 1rem;
+    color: #1a3a5c;
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* CTA Button */
+.approach-cta .btn-lg {
+    display: inline-block;
+    padding: 14px 40px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    background-color: #2e8b57;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.approach-cta .btn-lg:hover {
+    background-color: #236b43;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(46, 139, 87, 0.3);
+}
+
+.approach-cta .btn-lg i {
+    margin-left: 8px;
+    font-size: 0.9rem;
+}
+
+/* ==============================================
+   RESPONSIVE DESIGN
+   ============================================== */
+
+/* --- Tablet (768px to 991px) --- */
+@media (max-width: 991px) {
+    .focus-approach-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .approach-header {
+        gap: 12px;
+    }
+    .approach-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
+    }
+    .approach-header h3 {
+        font-size: 1.2rem;
+    }
+    .focus-box h3 {
+        font-size: 1.2rem;
+    }
+    .focus-list-text strong {
+        font-size: 1rem;
+    }
+    .focus-list-text span {
+        font-size: 0.85rem;
+    }
+}
+
+/* --- Mobile (up to 767px) --- */
+@media (max-width: 767px) {
+    .breadcrumb-section {
+        padding: 12px 0;
+    }
+    .breadcrumb {
+        font-size: 0.8rem;
+    }
+    .focus-approach-section {
+        padding: 30px 0 40px 0;
+    }
+    .focus-box,
+    .approach-box {
+        padding: 25px 20px;
+    }
+    .focus-list-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1rem;
+    }
+    .focus-list-text strong {
+        font-size: 0.95rem;
+    }
+    .focus-list-text span {
+        font-size: 0.8rem;
+    }
+    .approach-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+    .approach-header h3 {
+        font-size: 1.1rem;
+    }
+    .approach-step {
+        font-size: 0.9rem;
+        gap: 8px;
+        padding: 8px 0;
+    }
+    .step-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
+    }
+    .step-arrow {
+        font-size: 0.7rem;
+    }
+    .approach-quote {
+        padding: 15px 20px;
+    }
+    .approach-quote p {
+        font-size: 0.9rem;
+    }
+    .approach-cta .btn-lg {
+        padding: 12px 35px;
+        font-size: 0.9rem;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* --- Small Mobile (up to 480px) --- */
+@media (max-width: 480px) {
+    .focus-box h3 {
+        font-size: 1.1rem;
+    }
+    .focus-list li {
+        gap: 12px;
+        padding: 12px 0;
+    }
+    .focus-list-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 0.9rem;
+    }
+    .focus-list-text strong {
+        font-size: 0.9rem;
+    }
+    .focus-list-text span {
+        font-size: 0.75rem;
+    }
+    .approach-header h3 {
+        font-size: 1rem;
+    }
+    .approach-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    .approach-step {
+        font-size: 0.8rem;
+        gap: 6px;
+    }
+    .step-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 0.7rem;
+    }
+    .approach-quote p {
+        font-size: 0.85rem;
+    }
+    .approach-cta .btn-lg {
+        padding: 10px 30px;
+        font-size: 0.85rem;
+    }
+}

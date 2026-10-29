@@ -1,0 +1,235 @@
+/* assets/css/get-involved.css */
+
+/* ==============================================
+   GET INVOLVED PAGE STYLES
+   ============================================== */
+
+/* --- Hero Section (UPDATED for no side-cropping) --- */
+.get-involved-hero {
+    width: 100%;
+    background-color: #e8f5e9; /* Fallback color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.get-involved-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* Ensures the full image is visible without cropping */
+    object-position: center;
+}
+
+/* --- Involvement Options Section --- */
+.involvement-options-section {
+    padding: 60px 0 70px 0;
+    background-color: #ffffff;
+}
+
+.involvement-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* The card is now an <a> tag, so we style it as a block element */
+.involvement-card {
+    display: block;
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 16px;
+    padding: 35px 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.involvement-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    border-color: #d4e8d9;
+}
+
+.involvement-icon {
+    width: 70px;
+    height: 70px;
+    background-color: #e8f5e9;
+    color: #2e8b57;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    margin: 0 auto 20px;
+    border: 2px solid #2e8b57;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.involvement-card:hover .involvement-icon {
+    background-color: #2e8b57;
+    color: #ffffff;
+}
+
+.involvement-card h3 {
+    font-size: 1.2rem;
+    color: #1a3a5c;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.involvement-card p {
+    font-size: 0.9rem;
+    color: #666666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* --- Impact CTA Section (UPDATED for no side-cropping) --- */
+.impact-cta-section {
+    position: relative;
+    width: 100%;
+    background-color: #e8f5e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.impact-cta-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Overlay content on top of the image */
+.impact-cta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.impact-cta-overlay h2 {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #1a3a5c;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.impact-cta-overlay .btn-lg {
+    display: inline-block;
+    padding: 16px 45px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    background-color: #2e8b57;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(46, 139, 87, 0.3);
+}
+
+.impact-cta-overlay .btn-lg:hover {
+    background-color: #236b43;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(46, 139, 87, 0.4);
+}
+
+.impact-cta-overlay .btn-lg i {
+    margin-left: 10px;
+    font-size: 0.9rem;
+}
+
+/* ==============================================
+   RESPONSIVE DESIGN
+   ============================================== */
+
+/* --- Tablet (768px to 991px) --- */
+@media (max-width: 991px) {
+    .involvement-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .impact-cta-overlay h2 {
+        font-size: 2rem;
+    }
+}
+
+/* --- Mobile (up to 767px) --- */
+@media (max-width: 767px) {
+    .involvement-options-section {
+        padding: 40px 0 50px 0;
+    }
+    .involvement-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .involvement-card {
+        padding: 25px 15px;
+    }
+    .involvement-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    .involvement-card h3 {
+        font-size: 1.1rem;
+    }
+    .involvement-card p {
+        font-size: 0.85rem;
+    }
+    .impact-cta-overlay {
+        position: relative;
+        background-color: #e8f5e9;
+        padding: 40px 0;
+    }
+    .impact-cta-overlay h2 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .impact-cta-overlay .btn-lg {
+        padding: 12px 35px;
+        font-size: 0.9rem;
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+/* --- Small Mobile (up to 480px) --- */
+@media (max-width: 480px) {
+    .involvement-card {
+        padding: 20px 12px;
+    }
+    .involvement-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 1.2rem;
+    }
+    .involvement-card h3 {
+        font-size: 1rem;
+    }
+    .involvement-card p {
+        font-size: 0.8rem;
+    }
+    .impact-cta-overlay h2 {
+        font-size: 1.3rem;
+    }
+    .impact-cta-overlay .btn-lg {
+        padding: 10px 30px;
+        font-size: 0.85rem;
+    }
+}

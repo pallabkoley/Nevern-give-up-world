@@ -1,0 +1,897 @@
+/* assets/css/style.css */
+
+/* ==============================================
+   VARIABLES & RESET
+   ============================================== */
+:root {
+    --primary-navy: #1a3a5c;
+    --primary-green: #2e8b57;
+    --light-green: #e8f5e9;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --white: #ffffff;
+    --font-main: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--white);
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- Container --- */
+.container {
+   
+    margin: 0 auto;
+    padding: 0 5vw;
+    width: 100%;
+}
+
+/* ==============================================
+   HEADER & NAVIGATION
+   ============================================== */
+/* --- Header (Fixed on top) --- */
+.site-header {
+    background: #ffffff;
+    padding: 12px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: box-shadow 0.3s ease, padding 0.3s ease;
+}
+
+/* Optional: Slight shadow/padding change when scrolled */
+.site-header.scrolled {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    padding: 8px 0;
+}
+
+/* Spacer to prevent content jumping under fixed header */
+.header-spacer {
+    display: block;
+    width: 100%;
+    height: 40px; /* Adjust if your header height changes */
+}
+
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* --- Main Navigation --- */
+.main-nav > ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav > ul > li {
+    position: relative;
+}
+
+.main-nav a {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--primary-navy);
+    transition: color 0.3s;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 0;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--primary-green);
+}
+
+.main-nav > ul > li > a .fa-chevron-down {
+    font-size: 0.65rem;
+    transition: transform 0.3s ease;
+}
+
+.main-nav > ul > li:hover > a .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+/* --- Dropdown Menu (Desktop) --- */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    min-width: 260px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px 0;
+    list-style: none;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+    border: 1px solid #e8f0eb;
+}
+
+.main-nav > ul > li:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    color: var(--primary-navy);
+    transition: background-color 0.2s, color 0.2s;
+    font-weight: 400;
+}
+
+.dropdown-menu li a:hover {
+    background-color: var(--light-green);
+    color: var(--primary-green);
+    font-weight: 500;
+}
+
+/* --- Donate Button --- */
+.btn-donate {
+    background-color: var(--primary-green);
+    color: #ffffff !important;
+    padding: 8px 22px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-donate:hover {
+    background-color: #236b43;
+}
+
+/* --- Mobile Menu Toggle --- */
+.mobile-menu-toggle {
+    display: none;
+    font-size: 1.6rem;
+    color: var(--primary-navy);
+    cursor: pointer;
+    padding: 5px;
+    background: none;
+    border: none;
+}
+
+/* ==============================================
+   GLOBAL BUTTONS
+   ============================================== */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    font-family: var(--font-main);
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-green);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: #236b43;
+    transform: translateY(-2px);
+}
+
+/* ==============================================
+   HERO SECTION
+   ============================================== */
+.hero-section {
+    position: relative;
+    width: 100%;
+    background-color: var(--light-green);
+    overflow: hidden;
+}
+
+.hero-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Button overlay on hero */
+.hero-section .hero-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 60px;
+    padding-left: 5vw;
+    pointer-events: none; /* Let clicks pass through the container */
+}
+
+.hero-button-wrapper {
+    display: inline-block;
+    pointer-events: auto; /* Re-enable clicks on the button */
+}
+
+/* ==============================================
+   FOCUS AREAS SECTION
+   ============================================== */
+.focus-areas-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-navy);
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.focus-card {
+    display: block;
+    background: var(--white);
+    border: 1px solid #eee;
+    border-radius: 15px;
+    padding: 40px 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.focus-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    border-color: #d4e8d9;
+}
+
+.focus-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--light-green);
+    color: var(--primary-green);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    margin: 0 auto 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.focus-card:hover .focus-icon {
+    background-color: var(--primary-green);
+    color: var(--white);
+}
+
+.focus-card h3 {
+    font-size: 1.2rem;
+    color: var(--primary-navy);
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.focus-card p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+/* ==============================================
+   TAGLINE BANNER (With Curved Top)
+   ============================================== */
+.tagline-banner {
+    background-color: var(--light-green);
+    padding: 80px 0 60px;
+    text-align: center;
+    position: relative;
+    border-top-left-radius: 50% 60px;
+    border-top-right-radius: 50% 60px;
+    margin-top: -40px;
+    z-index: 10;
+}
+
+.tagline-banner h2 {
+    font-size: 1.8rem;
+    color: var(--primary-green);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* ==============================================
+   FOOTER
+   ============================================== */
+.site-footer {
+    background-color: var(--primary-navy);
+    color: var(--white);
+    padding: 60px 0 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-col h4 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul a {
+    color: #a0b4c8;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-col ul a:hover {
+    color: var(--white);
+}
+
+.brand-col img {
+    height: 80px;
+    width: auto;
+    margin-bottom: 15px;
+}
+
+.brand-col p {
+    color: #a0b4c8;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--white);
+    transition: background 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-green);
+}
+
+.footer-bottom {
+    background-color: #132c46;
+    padding: 20px 0;
+    font-size: 0.85rem;
+    color: #a0b4c8;
+}
+
+.footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-legal a {
+    color: #a0b4c8;
+    margin-left: 10px;
+}
+
+.footer-legal a:hover {
+    color: var(--white);
+}
+
+/* ==============================================
+   RESPONSIVE DESIGN
+   ============================================== */
+
+/* --- Large Tablets & Small Desktops (992px and below) --- */
+@media (max-width: 992px) {
+    .container {
+        padding: 0 30px;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .focus-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .focus-card {
+        padding: 35px 20px;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    .tagline-banner h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* --- Mobile Menu Breakpoint (991px and below) --- */
+@media (max-width: 991px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+        width: 100%;
+        margin-top: 15px;
+        order: 3;
+    }
+
+    .main-nav.active {
+        display: block;
+    }
+
+    .main-nav > ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        width: 100%;
+        padding-bottom: 15px;
+        text-align: left;
+    }
+
+    .main-nav > ul > li {
+        width: 100%;
+        border-bottom: 1px solid #f0f0f0;
+        text-align: left;
+    }
+
+    .main-nav > ul > li > a {
+        padding: 14px 0;
+        width: 100%;
+        justify-content: space-between;
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    /* Mobile Accordion Dropdown */
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        padding: 0 0 0 15px;
+        min-width: auto;
+        display: none;
+        background-color: transparent;
+    }
+
+    .has-dropdown.active-dropdown .dropdown-menu {
+        display: block;
+    }
+
+    .has-dropdown.active-dropdown > a .fa-chevron-down {
+        transform: rotate(180deg);
+    }
+
+    .dropdown-menu li {
+        border-bottom: none;
+    }
+
+    .dropdown-menu li a {
+        padding: 10px 0 10px 10px;
+        font-size: 0.9rem;
+        color: #555;
+        text-align: left;
+    }
+
+    .dropdown-menu li a:hover {
+        background-color: transparent;
+        color: var(--primary-green);
+    }
+
+    .btn-donate {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 10px 25px;
+        text-align: center;
+    }
+}
+
+/* --- Tablets & Large Phones (768px and below) --- */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .logo img {
+        height: 45px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+
+    .focus-areas-section {
+        padding: 50px 0;
+    }
+
+    .focus-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .focus-card {
+        padding: 30px 20px;
+    }
+
+    .focus-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .focus-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .focus-card p {
+        font-size: 0.85rem;
+    }
+
+    /* Hero button positioning */
+    .hero-section .hero-container {
+        padding-bottom: 30px;
+    }
+
+    /* Tagline Banner adjustments */
+    .tagline-banner {
+        padding: 60px 0 40px;
+        margin-top: -30px;
+        border-top-left-radius: 50% 30px;
+        border-top-right-radius: 50% 30px;
+    }
+
+    .tagline-banner h2 {
+        font-size: 1.3rem;
+        padding: 0 15px;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .brand-col img {
+        margin: 0 auto 15px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-bottom .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-legal a {
+        margin: 0 5px;
+    }
+}
+
+/* --- Small Phones (480px and below) --- */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .main-nav > ul > li > a {
+        font-size: 0.9rem;
+    }
+
+    .dropdown-menu li a {
+        font-size: 0.85rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .focus-areas-section {
+        padding: 40px 0;
+    }
+
+    .focus-card {
+        padding: 25px 15px;
+    }
+
+    .focus-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 1.3rem;
+    }
+
+    .focus-card h3 {
+        font-size: 1rem;
+    }
+
+    .focus-card p {
+        font-size: 0.8rem;
+    }
+
+    .hero-section .hero-container {
+        padding-bottom: 20px;
+    }
+
+    .hero-button-wrapper .btn {
+        padding: 10px 22px;
+        font-size: 0.85rem;
+    }
+
+    .tagline-banner {
+        padding: 50px 0 30px;
+    }
+
+    .tagline-banner h2 {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        padding: 10px 22px;
+        font-size: 0.9rem;
+    }
+
+    .brand-col img {
+        height: 60px;
+    }
+
+    .footer-col h4 {
+        font-size: 1rem;
+    }
+
+    .footer-col ul a {
+        font-size: 0.85rem;
+    }
+}
+
+/* --- Extra Small Phones (360px and below) --- */
+@media (max-width: 360px) {
+    .logo img {
+        height: 35px;
+    }
+
+    .hero-button-wrapper .btn {
+        padding: 8px 18px;
+        font-size: 0.8rem;
+    }
+
+    .tagline-banner h2 {
+        font-size: 1rem;
+    }
+}
+
+/* On mobile, the header may grow when the menu opens — adjust spacer */
+@media (max-width: 991px) {
+    .header-spacer {
+        height: 74px;
+    }
+}
+
+/* ==============================================
+   FLOATING WHATSAPP BUTTON
+   ============================================== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.9rem;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 9999;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    animation: whatsapp-pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+    color: #ffffff;
+}
+
+/* Pulse animation to draw attention */
+@keyframes whatsapp-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* --- Mobile Adjustments --- */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 52px;
+        height: 52px;
+        font-size: 1.6rem;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-float {
+        width: 48px;
+        height: 48px;
+        font-size: 1.5rem;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+/* --- Footer Brand Column --- */
+.brand-col {
+    text-align: left; /* Default: left-aligned on desktop */
+}
+    .brand-col img {
+        height: auto;
+    }
+.footer-logo {
+    width: 60%;
+    max-width: 320px;
+    height: auto;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* --- Footer Bottom --- */
+.footer-bottom {
+    background-color: #132c46;
+    padding: 20px 0;
+    font-size: 0.85rem;
+    color: #a0b4c8;
+}
+
+.footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-legal a {
+    color: #a0b4c8;
+    margin-left: 10px;
+}
+
+.footer-legal a:hover {
+    color: var(--white);
+}
+
+/* Developer Credit */
+.dev-credit {
+    font-size: 0.8rem;
+    color: #a0b4c8;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.dev-credit a {
+    color: #2e8b57;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.dev-credit a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* ==============================================
+   MOBILE ADJUSTMENTS (Center Logo)
+   ============================================== */
+@media (max-width: 768px) {
+    .brand-col {
+        text-align: center; /* Center-align the logo on mobile */
+    }
+
+    .footer-logo {
+        margin: 0 auto 15px; /* Center the logo horizontally */
+    }
+}
+.visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}

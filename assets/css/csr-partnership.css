@@ -1,0 +1,438 @@
+/* assets/css/csr-partnership.css */
+
+/* ==============================================
+   CSR PARTNERSHIP PAGE STYLES
+   ============================================== */
+
+/* --- Breadcrumb --- */
+.breadcrumb-section {
+    background-color: #f8fbf9;
+    padding: 15px 0;
+    border-bottom: 1px solid #e8f0eb;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    color: #1a3a5c;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.breadcrumb a {
+    color: #2e8b57;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: #1a3a5c;
+}
+
+.breadcrumb i {
+    font-size: 0.6rem;
+    color: #999;
+}
+
+.breadcrumb li:last-child {
+    color: #666;
+}
+
+/* --- CSR Hero Section (UPDATED for no side-cropping) --- */
+.csr-hero-section {
+    width: 100%;
+    background-color: #e8f5e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.csr-hero-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* --- Introduction Section --- */
+.csr-intro-section {
+    padding: 60px 0 40px 0;
+    background-color: #ffffff;
+}
+
+.csr-intro-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.csr-intro-content h2 {
+    font-size: 2rem;
+    color: #1a3a5c;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.csr-intro-content p {
+    font-size: 1.05rem;
+    color: #555555;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+/* --- Why Partner Section --- */
+.csr-why-section {
+    padding: 60px 0 70px 0;
+    background-color: #f8fbf9;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #1a3a5c;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.csr-why-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.csr-why-card {
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 16px;
+    padding: 35px 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.csr-why-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    border-color: #d4e8d9;
+}
+
+.csr-why-icon {
+    width: 65px;
+    height: 65px;
+    background-color: #e8f5e9;
+    color: #2e8b57;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border: 2px solid #2e8b57;
+}
+
+.csr-why-card h3 {
+    font-size: 1.2rem;
+    color: #1a3a5c;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.csr-why-card p {
+    font-size: 0.95rem;
+    color: #555555;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* --- Areas of CSR Partnership Section --- */
+.csr-areas-section {
+    padding: 60px 0 70px 0;
+    background-color: #ffffff;
+}
+
+.csr-areas-subtitle {
+    text-align: center;
+    font-size: 1.05rem;
+    color: #666666;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+}
+
+.csr-areas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.csr-area-card {
+    background: #f8fbf9;
+    border: 1px solid #e0ece6;
+    border-radius: 16px;
+    padding: 35px 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.csr-area-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    border-color: #d4e8d9;
+    background-color: #ffffff;
+}
+
+.csr-area-icon {
+    width: 70px;
+    height: 70px;
+    background-color: #2e8b57;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    margin: 0 auto 20px;
+}
+
+.csr-area-card h3 {
+    font-size: 1.1rem;
+    color: #1a3a5c;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.csr-area-card p {
+    font-size: 0.9rem;
+    color: #555555;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* --- CSR CTA Section --- */
+.csr-cta-section {
+    background: linear-gradient(135deg, #1a3a5c 0%, #2a5a7c 100%);
+    padding: 70px 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+.csr-cta-section h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.csr-cta-section p {
+    font-size: 1.05rem;
+    color: #d4e8d9;
+    margin-bottom: 35px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.csr-cta-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Primary Button */
+.csr-cta-buttons .btn-primary {
+    display: inline-block;
+    padding: 14px 40px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    background-color: #2e8b57;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid #2e8b57;
+}
+
+.csr-cta-buttons .btn-primary:hover {
+    background-color: #236b43;
+    border-color: #236b43;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(46, 139, 87, 0.4);
+}
+
+/* Outline Button */
+.csr-cta-buttons .btn-outline {
+    display: inline-block;
+    padding: 14px 40px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    background-color: transparent;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid #ffffff;
+}
+
+.csr-cta-buttons .btn-outline:hover {
+    background-color: #ffffff;
+    color: #1a3a5c;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+}
+
+.csr-cta-buttons .btn-primary i,
+.csr-cta-buttons .btn-outline i {
+    margin-left: 8px;
+    font-size: 0.9rem;
+}
+
+/* ==============================================
+   RESPONSIVE DESIGN
+   ============================================== */
+
+/* --- Tablet (768px to 991px) --- */
+@media (max-width: 991px) {
+    .csr-why-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .csr-areas-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .csr-intro-content h2 {
+        font-size: 1.8rem;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .csr-cta-section h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* --- Mobile (up to 767px) --- */
+@media (max-width: 767px) {
+    .breadcrumb-section {
+        padding: 12px 0;
+    }
+    .breadcrumb {
+        font-size: 0.8rem;
+    }
+    .csr-intro-section {
+        padding: 40px 0 20px 0;
+    }
+    .csr-intro-content h2 {
+        font-size: 1.5rem;
+    }
+    .csr-intro-content p {
+        font-size: 0.95rem;
+    }
+    .csr-why-section,
+    .csr-areas-section {
+        padding: 40px 0 50px 0;
+    }
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+    .csr-why-card {
+        padding: 25px 20px;
+    }
+    .csr-why-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    .csr-why-card h3 {
+        font-size: 1.1rem;
+    }
+    .csr-why-card p {
+        font-size: 0.9rem;
+    }
+    .csr-areas-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .csr-area-card {
+        padding: 25px 20px;
+    }
+    .csr-area-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+    .csr-area-card h3 {
+        font-size: 1rem;
+    }
+    .csr-area-card p {
+        font-size: 0.85rem;
+    }
+    .csr-cta-section {
+        padding: 50px 0;
+    }
+    .csr-cta-section h2 {
+        font-size: 1.4rem;
+    }
+    .csr-cta-section p {
+        font-size: 0.95rem;
+    }
+    .csr-cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .csr-cta-buttons .btn-primary,
+    .csr-cta-buttons .btn-outline {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+}
+
+/* --- Small Mobile (up to 480px) --- */
+@media (max-width: 480px) {
+    .csr-intro-content h2 {
+        font-size: 1.3rem;
+    }
+    .section-title {
+        font-size: 1.3rem;
+    }
+    .csr-why-card h3,
+    .csr-area-card h3 {
+        font-size: 1rem;
+    }
+    .csr-why-card p,
+    .csr-area-card p {
+        font-size: 0.85rem;
+    }
+    .csr-cta-section h2 {
+        font-size: 1.2rem;
+    }
+    .csr-cta-section p {
+        font-size: 0.85rem;
+    }
+    .csr-cta-buttons .btn-primary,
+    .csr-cta-buttons .btn-outline {
+        padding: 10px 25px;
+        font-size: 0.85rem;
+    }
+}

@@ -1,0 +1,29 @@
+RewriteEngine On
+
+RewriteBase /admin/
+
+# ---------------------------------------------
+# Disable directory listing
+# ---------------------------------------------
+Options -Indexes
+
+# ---------------------------------------------
+# Protect sensitive files
+# ---------------------------------------------
+<FilesMatch "^(auth|debug|setup-admin)\.php$">
+    Require all denied
+</FilesMatch>
+
+# ---------------------------------------------
+# Remove .php extension from browser URL
+# ---------------------------------------------
+RewriteCond %{THE_REQUEST} \s/+admin/([^\s?]+)\.php(?:[?\s]) [NC]
+RewriteRule ^(.+)\.php$ /admin/$1 [R=301,L,NE]
+
+# ---------------------------------------------
+# Internally add .php
+# ---------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+?)/?$ $1.php [L]

@@ -1,0 +1,190 @@
+/* assets/css/partner.css */
+
+/* --- Partner Form Hero --- */
+.partner-form-hero-section {
+    background: linear-gradient(135deg, var(--primary-navy) 0%, #2a5a7c 100%);
+    padding: 80px 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.partner-form-hero-section h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+.partner-form-hero-section p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* --- Partner Form Section --- */
+.partner-form-section {
+    padding: 80px 0;
+    background-color: #f8fbf9;
+}
+
+.form-container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.form-wrapper {
+    background: var(--white);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+    border: 1px solid #eef2f0;
+}
+
+.form-wrapper h2 {
+    font-size: 1.8rem;
+    color: var(--primary-navy);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.form-intro {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 40px;
+}
+
+.form-section-title {
+    font-size: 1.1rem;
+    color: var(--primary-green);
+    border-bottom: 2px solid #e8f5e9;
+    padding-bottom: 8px;
+    margin: 30px 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-section-title:first-of-type {
+    margin-top: 0;
+}
+
+/* --- Form Styling --- */
+.partner-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.partner-form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.partner-form .form-group.full-width {
+    grid-column: 1 / -1;
+    margin-bottom: 25px;
+}
+
+.partner-form label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--primary-navy);
+    margin-bottom: 8px;
+}
+
+.required {
+    color: #e74c3c;
+}
+
+.partner-form input,
+.partner-form select,
+.partner-form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #dce5e0;
+    border-radius: 10px;
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    background-color: #fcfdfd;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.partner-form input:focus,
+.partner-form select:focus,
+.partner-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 4px rgba(46, 139, 87, 0.1);
+    background-color: var(--white);
+}
+
+.partner-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.partner-form select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231a3a5c' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+    cursor: pointer;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 16px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+}
+
+/* --- Alerts --- */
+.alert {
+    padding: 18px 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.alert-success {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+    border: 1px solid #c8e6c9;
+}
+
+.alert-error {
+    background-color: #fdecea;
+    color: #b71c1c;
+    border: 1px solid #f5c6cb;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .partner-form-hero-section h1 {
+        font-size: 2rem;
+    }
+    .form-wrapper {
+        padding: 30px 20px;
+    }
+    .partner-form .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .partner-form .form-group {
+        margin-bottom: 20px;
+    }
+}

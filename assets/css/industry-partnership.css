@@ -1,0 +1,328 @@
+/* assets/css/industry-partnership.css */
+
+/* --- Industry Hero Section --- */
+.industry-hero-section {
+    background: linear-gradient(135deg, #1a3a5c 0%, #2a5a7c 100%);
+    padding: 80px 0;
+    color: var(--white);
+}
+
+.industry-hero-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.industry-hero-content {
+    flex: 1;
+}
+
+.industry-subtitle {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    opacity: 0.85;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.industry-hero-content h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.industry-hero-content p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 550px;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+.industry-hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.industry-hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+/* --- Partnership Areas Section --- */
+.partnership-areas-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-navy);
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.partnership-areas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.area-card {
+    background: #f8fbf9;
+    border: 1px solid #e8f0eb;
+    border-radius: 15px;
+    padding: 35px 25px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.area-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.area-icon {
+    width: 65px;
+    height: 65px;
+    background-color: var(--light-green);
+    color: var(--primary-green);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    margin: 0 auto 20px;
+}
+
+.area-card h3 {
+    font-size: 1.15rem;
+    color: var(--primary-navy);
+    margin-bottom: 10px;
+}
+
+.area-card p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* --- Logistics Partners Section --- */
+.logistics-partners-section {
+    padding: 80px 0;
+    background-color: #f0f7f4;
+}
+
+.logistics-partners-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.logistics-content h2 {
+    font-size: 2rem;
+    color: var(--primary-navy);
+    margin-bottom: 15px;
+}
+
+.logistics-tagline {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-green);
+    margin-bottom: 20px;
+}
+
+.logistics-content p {
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+.logistics-support-grid h3 {
+    font-size: 1.3rem;
+    color: var(--primary-navy);
+    margin-bottom: 25px;
+}
+
+.support-items-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.support-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--white);
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--primary-navy);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    transition: transform 0.3s;
+}
+
+.support-item:hover {
+    transform: translateX(5px);
+}
+
+.support-item i {
+    color: var(--primary-green);
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* --- Why Partner Section --- */
+.why-partner-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.why-partner-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.why-partner-card {
+    text-align: center;
+    padding: 30px;
+    background: #f8fbf9;
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+
+.why-partner-card:hover {
+    transform: translateY(-5px);
+}
+
+.why-partner-card i {
+    font-size: 2rem;
+    color: var(--primary-green);
+    margin-bottom: 15px;
+}
+
+.why-partner-card h4 {
+    font-size: 1.1rem;
+    color: var(--primary-navy);
+    margin-bottom: 10px;
+}
+
+.why-partner-card p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+/* --- Industry CTA Section --- */
+.industry-cta-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #1a3a5c 0%, #2a5a7c 100%);
+    text-align: center;
+    color: var(--white);
+}
+
+.industry-cta-section h2 {
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: 15px;
+}
+
+.industry-cta-section p {
+    font-size: 1.05rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto 35px;
+    line-height: 1.6;
+}
+
+.industry-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-lg {
+    padding: 15px 35px;
+    font-size: 1rem;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+    padding: 13px 33px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-outline:hover {
+    background: var(--white);
+    color: var(--primary-navy);
+    transform: translateY(-2px);
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+    .industry-hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .industry-hero-image {
+        text-align: center;
+    }
+    .industry-hero-content p {
+        margin: 0 auto 30px;
+    }
+    .partnership-areas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .logistics-partners-container {
+        grid-template-columns: 1fr;
+    }
+    .why-partner-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .industry-hero-content h1 {
+        font-size: 2rem;
+    }
+    .partnership-areas-grid {
+        grid-template-columns: 1fr;
+    }
+    .why-partner-grid {
+        grid-template-columns: 1fr;
+    }
+    .support-items-grid {
+        grid-template-columns: 1fr;
+    }
+    .industry-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-lg {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+    }
+}

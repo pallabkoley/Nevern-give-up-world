@@ -1,0 +1,654 @@
+/* assets/css/capacity-building.css */
+
+/* ==============================================
+   CAPACITY BUILDING & SOFT SKILL PAGE STYLES
+   ============================================== */
+
+/* --- Breadcrumb --- */
+.breadcrumb-section {
+    background-color: #f8fbf9;
+    padding: 15px 0;
+    border-bottom: 1px solid #e8f0eb;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    color: #1a3a5c;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.breadcrumb a {
+    color: #2e8b57;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: #1a3a5c;
+}
+
+.breadcrumb i {
+    font-size: 0.6rem;
+    color: #999;
+}
+
+.breadcrumb li:last-child {
+    color: #666;
+}
+
+/* --- Program Detail Hero (UPDATED for no side-cropping) --- */
+.capacity-hero {
+    width: 100%;
+    background-color: #e8f5e9; /* Fallback color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.capacity-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* Ensures the full image is visible without cropping */
+    object-position: center;
+}
+
+/* --- Benefit & Training Section --- */
+.benefit-training-section {
+    padding: 50px 0 60px 0;
+    background-color: #ffffff;
+}
+
+.benefit-training-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* --- Box Header --- */
+.box-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.box-icon {
+    width: 55px;
+    height: 55px;
+    background-color: #2e8b57;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+.dark-icon {
+    background-color: #1a3a5c;
+}
+
+.box-header h3 {
+    font-size: 1.4rem;
+    color: #1a3a5c;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* --- Benefit Box (Left) --- */
+.benefit-box {
+    background-color: #f0f7f4;
+    border-radius: 16px;
+    padding: 35px 30px;
+}
+
+.benefit-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.benefit-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    font-size: 1rem;
+    color: #1a3a5c;
+    font-weight: 500;
+    border-bottom: 1px solid #e0ece6;
+}
+
+.benefit-list li:last-child {
+    border-bottom: none;
+}
+
+.check-icon {
+    width: 26px;
+    height: 26px;
+    background-color: #2e8b57;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+    flex-shrink: 0;
+}
+
+/* --- Training Areas Box (Right) --- */
+.capacity-training-box {
+    background-color: #f0f7f4;
+    border-radius: 16px;
+    padding: 35px 30px;
+}
+
+.training-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.training-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 0;
+    font-size: 1rem;
+    color: #1a3a5c;
+    font-weight: 500;
+    border-bottom: 1px solid #e0ece6;
+}
+
+.training-list li:last-child {
+    border-bottom: none;
+}
+
+.list-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    color: #2e8b57;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Objective & CTA Section --- */
+.objective-cta-section {
+    padding: 0 0 60px 0;
+    background-color: #ffffff;
+}
+
+.objective-cta-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: #e8f5e9;
+    border-radius: 16px;
+    padding: 35px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative leaf pattern */
+.objective-cta-container::before {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 150px;
+    height: 150px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 10 Q70 30 60 60 Q40 40 50 10" fill="%232e8b57" opacity="0.1"/><path d="M80 50 Q90 70 70 90 Q50 70 80 50" fill="%232e8b57" opacity="0.1"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+.objective-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+.objective-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    color: #2e8b57;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.objective-text h3 {
+    font-size: 1.3rem;
+    color: #1a3a5c;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.objective-text p {
+    font-size: 0.95rem;
+    color: #555555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.objective-cta-btn {
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.objective-cta-btn .btn-lg {
+    display: inline-block;
+    padding: 14px 40px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    background-color: #2e8b57;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.objective-cta-btn .btn-lg:hover {
+    background-color: #236b43;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(46, 139, 87, 0.3);
+}
+
+.objective-cta-btn .btn-lg i {
+    margin-left: 8px;
+    font-size: 0.9rem;
+}
+
+/* ==============================================
+   RESPONSIVE DESIGN
+   ============================================== */
+
+/* --- Tablet (768px to 991px) --- */
+@media (max-width: 991px) {
+    .benefit-training-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .objective-cta-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 25px;
+    }
+    .objective-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .objective-cta-btn {
+        width: 100%;
+    }
+    .objective-cta-btn .btn-lg {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* --- Mobile (up to 767px) --- */
+@media (max-width: 767px) {
+    .breadcrumb-section {
+        padding: 12px 0;
+    }
+    .breadcrumb {
+        font-size: 0.8rem;
+    }
+    .benefit-training-section {
+        padding: 30px 0 40px 0;
+    }
+    .benefit-box,
+    .capacity-training-box {
+        padding: 25px 20px;
+    }
+    .box-header {
+        gap: 12px;
+        margin-bottom: 15px;
+    }
+    .box-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+    .box-header h3 {
+        font-size: 1.2rem;
+    }
+    .benefit-list li,
+    .training-list li {
+        font-size: 0.9rem;
+        padding: 10px 0;
+        gap: 10px;
+    }
+    .check-icon {
+        width: 22px;
+        height: 22px;
+        font-size: 0.6rem;
+    }
+    .list-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+    .objective-cta-section {
+        padding: 0 0 40px 0;
+    }
+    .objective-cta-container {
+        padding: 25px 20px;
+        gap: 20px;
+    }
+    .objective-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    .objective-text h3 {
+        font-size: 1.1rem;
+    }
+    .objective-text p {
+        font-size: 0.85rem;
+    }
+    .objective-cta-btn .btn-lg {
+        padding: 12px 35px;
+        font-size: 0.9rem;
+    }
+}
+
+/* --- Small Mobile (up to 480px) --- */
+@media (max-width: 480px) {
+    .box-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    .box-header h3 {
+        font-size: 1.1rem;
+    }
+    .benefit-list li,
+    .training-list li {
+        font-size: 0.85rem;
+    }
+    .list-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
+    }
+    .objective-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+    .objective-text h3 {
+        font-size: 1rem;
+    }
+    .objective-text p {
+        font-size: 0.8rem;
+    }
+    .objective-cta-btn .btn-lg {
+        padding: 10px 30px;
+        font-size: 0.85rem;
+    }
+}
+
+
+/* ==============================================
+   ENROL NOW MODAL STYLES
+   ============================================== */
+
+.enroll-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.enroll-modal-overlay.active {
+    display: flex;
+}
+
+.enroll-modal {
+    background: #ffffff;
+    width: 100%;
+    max-width: 800px;
+    max-height: 90vh;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.enroll-modal-header {
+    background-color: #1a3a5c;
+    color: #ffffff;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.enroll-modal-header h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    color: #ffffff;
+    line-height: 1.3;
+}
+
+.enroll-modal-close {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.enroll-modal-close:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.enroll-modal-body {
+    padding: 30px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.enroll-form .form-group {
+    margin-bottom: 18px;
+}
+
+.enroll-form label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #1a3a5c;
+    margin-bottom: 6px;
+}
+
+.enroll-form .required {
+    color: #e74c3c;
+}
+
+.enroll-form input,
+.enroll-form select,
+.enroll-form textarea {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid #dce5e0;
+    border-radius: 8px;
+    font-family: var(--font-main);
+    font-size: 0.9rem;
+    color: #333;
+    background-color: #fcfdfd;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.enroll-form input:focus,
+.enroll-form select:focus,
+.enroll-form textarea:focus {
+    outline: none;
+    border-color: #2e8b57;
+    box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.12);
+    background-color: #ffffff;
+}
+
+.enroll-form textarea {
+    resize: vertical;
+    min-height: 55px;
+}
+
+.enroll-form select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231a3a5c' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 35px;
+    cursor: pointer;
+}
+
+.enroll-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.declaration-group {
+    background-color: #f0f7f4;
+    border-left: 4px solid #2e8b57;
+    border-radius: 0 8px 8px 0;
+    padding: 15px 18px;
+    margin: 25px 0 20px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.82rem;
+    color: #555;
+    font-weight: 400 !important;
+    line-height: 1.5;
+    cursor: pointer;
+    margin-bottom: 0 !important;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    margin-top: 2px;
+    accent-color: #2e8b57;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.enroll-form .btn-submit {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.enroll-modal .alert {
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.enroll-modal .alert-success {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+    border: 1px solid #c8e6c9;
+}
+
+.enroll-modal .alert-error {
+    background-color: #fdecea;
+    color: #b71c1c;
+    border: 1px solid #f5c6cb;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .enroll-modal-overlay {
+        padding: 10px;
+        align-items: flex-start;
+    }
+    .enroll-modal { max-height: 95vh; border-radius: 12px; }
+    .enroll-modal-header { padding: 15px 20px; }
+    .enroll-modal-header h2 { font-size: 1.05rem; }
+    .enroll-modal-body { padding: 20px; }
+    .enroll-form .form-row { grid-template-columns: 1fr; gap: 0; }
+}
+
+@media (max-width: 480px) {
+    .enroll-modal-header h2 { font-size: 0.95rem; }
+    .enroll-modal-body { padding: 15px; }
+    .enroll-form label { font-size: 0.8rem; }
+    .enroll-form input,
+    .enroll-form select,
+    .enroll-form textarea {
+        font-size: 0.85rem;
+        padding: 10px 12px;
+    }
+    .checkbox-label { font-size: 0.75rem; }
+}
