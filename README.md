@@ -128,8 +128,4 @@ Each submission is securely stored in MySQL and immediately visible to the Admin
 
 <hr>
 
-<h2>📌 Project Documentation</h2>
 
-<p>
-📑 <strong>Download:</strong> <a href="docs/NeverGiveUpWorld-Project-Doc.pdf" target="_blank">Download Full Project Documentation (PDF)</a>
-</p>
